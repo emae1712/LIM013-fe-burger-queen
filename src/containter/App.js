@@ -1,7 +1,7 @@
 
 import '../styles/App.css';
 import Header from '../components/Header'
-import Menu from '../components/Menu_options'
+import Menu from '../components/Menu_categories'
 
 function App() {
   return (

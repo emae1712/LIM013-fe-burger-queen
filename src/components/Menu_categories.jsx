@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Menu = () =>(
-    <section>
-      <button> Desayuno</button>
-      <button> Burger</button>
-      <button> Bebidas</button>
-      <button> Guarnicion</button>
+    <section className = "menu__buttons">
+      <button className = "btn-breakfast"> Desayuno</button>
+      <button className = "btn-burger"> Burger</button>
+      <button className = "btn-drinks"> Bebidas</button>
+      <button className = "btn-additional"> Guarnicion</button>
     </section>
   );
   

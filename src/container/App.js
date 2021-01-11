@@ -1,13 +1,11 @@
 
-import '../styles/App.css';
-import Header from '../components/Header'
-import Menu from '../components/Menu_categories'
-import Order from '../components/Order';
+import '../styles/App.scss';
+import Menu from '../components/Menu/Menu_categories'
+import Order from '../components/Menu/Order';
 
 function App() {
   return (
     <div className = "App">
-      <Header/>
       <Menu/>
       <Order/>
     </div>

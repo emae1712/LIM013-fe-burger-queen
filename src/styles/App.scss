@@ -1,0 +1,37 @@
+$main-color: #F86615;
+$secondary-color: #C4C4C4;
+$third-color: #3BAF29;
+$gradient-value: 180deg, #FFFFFF 0%, #FDDECC 0.01%, #FCBE9C 0.02%, #F86615 100%;
+$border: 10px;
+
+.App {
+  text-align: center;
+  width: 90%;
+  margin: 1rem auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "products order";
+}
+
+@media screen and (max-width: 768px){
+  .App{
+    grid-template-areas: "products products"
+                        "order order";
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rocket {
+    animation: Astroburger infinite 20s linear;
+  }
+}
+
+@keyframes Astroburger {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,9 +1,58 @@
-$naranja: #F86615;
+@import 'App.scss';
 
 header{
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    background-color: gray;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  //border-bottom: $secondary-color 2px ;
+  //background-color: gray;
+  border-bottom: 1px solid $secondary-color;
+  //background: linear-gradient($gradient-value);
 
+  div{
+    line-height: 80px;
+    display: inline-flex;
+    align-items: center;
+    float: left;
+  }
+
+  .astro{
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+  }
+
+  .logo{
+      color: $main-color; 
+      font-size: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-flex;
+  }
+  .rocket{
+    font-size: 3rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  nav{
+    float: right;
+    line-height: 80px;
+  }
+  nav a{
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: normal;
+    padding: 0 1rem;
+    font-size: 20px;
+
+    span{
+      color: $main-color;
+      line-height: normal;
+      
+    }
+  }
 }

@@ -16,8 +16,10 @@ $border: 10px;
 
 @media screen and (max-width: 768px){
   .App{
-    grid-template-areas: "products products"
-                        "order order";
+    grid-gap: 1rem;
+    grid-template-columns: none;
+    grid-template-areas: "products"
+                         "order";
   }
 }
 

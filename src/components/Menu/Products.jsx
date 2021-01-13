@@ -1,13 +1,17 @@
-import React, {Fragment} from "react";
+import React from "react";
+import '../../components/../styles/Products.scss';
 
 const Products = ({products}) =>{
-console.log(products);
+const cardProduct = (e) => {
+  console.log(e.target);
+} 
+
   return (
-    <Fragment>
+      <div className = "products__container" >
       {
       products.map((product) =>(
-        <div className = "products__container" key = {product.id}>
-          <img src={product.img} alt=""/>
+        <div className = "product__card" onClick={cardProduct} key = {product.id}>
+          <img className = "img-product" src={product.img} alt=""/>
           <h3 className = "product-name">{product.Product}</h3>
           <p className = "description">{product.Description}</p>
           <h4 className = "costo"> S/. {product.Cost}</h4>
@@ -20,7 +24,8 @@ console.log(products);
       <p className = "description">{item.Description}</p>
       <h4 className = "costo"> S/. {item.Cost}</h4>
     </div> */}
-    </Fragment>
+    </div>
+
   )
 };
   

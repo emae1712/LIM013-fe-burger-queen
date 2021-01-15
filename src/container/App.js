@@ -1,18 +1,12 @@
 
 import '../styles/App.scss';
-import Menu from '../components/Menu/Menu_categories'
-import Order from '../components/Menu/Order';
-
-
-
+import Menu from '../components/Menu/Menu'
 
 function App() {
   
    return (
     <div className = "App">
       <Menu/>
-      <Order/>
-     
     </div>
    
   );

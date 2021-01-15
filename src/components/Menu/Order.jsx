@@ -2,11 +2,9 @@ import React from 'react';
 import '../../components/../styles/Order.scss';
 
 
-const Order = () =>{
-  
+const Order = ({id, product}) =>{
+  console.log(id);
   return (
-   
-
     <aside className = "order__container">
       <h2>Nueva orden</h2>
       <form action="">
@@ -18,7 +16,7 @@ const Order = () =>{
       </div>
       
       <div>
-        <label htmlFor="">Mesa:</label>        
+        <label htmlFor="">Mesa: </label>        
         <input 
         placeholder = "mesa"
         type="text"/>
@@ -26,9 +24,9 @@ const Order = () =>{
 
       </form>
       <p>Cliente: </p>
-      <p>Mesa: </p>
+      <p>Mesa: {id}</p>
       <div>
-        <p>Total: 0</p>
+        <p>Total: {product}</p>
       </div>
       <button> Enviar</button>
     </aside>

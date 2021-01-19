@@ -20,33 +20,55 @@ const Menu = () =>{
   }, [category]);
 
   // select each product and save in an array
-  const [card, setCard] = useState([]);
+  const [cards, setCards] = useState([]);
 
   //add products in Order component, addProduct is onclick event of each card from Products
-  const addProduct = (product)=>{
+  const addProduct = (item)=>{
     // create a copy of product to add more properties
-    const item = {...product,
-    quantity: 1,
-    note:""
+    const product = {
+      id: item.id,
+      product: item.Product,
+      cost: item.Cost,
+      quantity: 1,
+      subtotal: 0,
+      note:""
     }
     //receive an array of each card clicked
-    const uno = card.find((oneCard)=> oneCard.id === item.id)
+    const uno = cards.find((oneCard)=> oneCard.id === product.id)
     if(uno ===undefined){
-    setCard([
-      ...card,
-      item
+    setCards([
+      ...cards,
+      product
     ]);
   }
 }
-  
 
   // remove a product
   const deleteProduct = (id)=>{
-    setCard(card.filter((oneCard)=> oneCard.id !== id))
+    setCards(cards.filter((oneCard)=> oneCard.id !== id))
   }
 
-  // contador de productos
-  // const [count, setCount] = useState(1);
+  //count products in the order component(increase)
+  const increaseProduct = (id)=>{
+    const newProducts = cards.map((oneCard)=>{
+      if(oneCard.id === id) {
+        oneCard.quantity ++;
+      };
+      return oneCard;
+      
+    })
+    setCards(newProducts)
+  }
+  //count products in the order component(decrease)
+  const decreaseProduct = (id)=>{
+    const newProducts = cards.map((oneCard)=>{
+      if(oneCard.id === id ) {
+        oneCard.quantity === 1 ? oneCard.quantity = oneCard.quantity : oneCard.quantity --;
+      }
+      return oneCard;
+    })
+    setCards(newProducts)
+  }
 
   return (
     <>
@@ -62,7 +84,13 @@ const Menu = () =>{
         <Products products = {products} addProduct = {addProduct}/>
       </div>
     </main>
-    <Order cards = {card} deleteProduct ={deleteProduct} />
+    <Order 
+      cards = {cards} 
+      setProducts = {setCards}
+      deleteProduct ={deleteProduct} 
+      increaseProduct = {increaseProduct}
+      decreaseProduct = {decreaseProduct}
+       />
     </>
   )
 };

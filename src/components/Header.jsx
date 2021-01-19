@@ -4,6 +4,7 @@ import { BsGraphUp } from "react-icons/bs";
 import { GiTable, GiForkKnifeSpoon, GiChefToque } from "react-icons/gi";
 import { IoLogoReact } from "react-icons/io5";
 import Astro from "../img/astro-logo.png"
+import {Link} from "react-router-dom";
 const Header = () =>{
 return (
   <header className = 'header__container'>
@@ -12,10 +13,10 @@ return (
       <a href= "#home" className = "logo"><span className = "rocket"><IoLogoReact/></span>stroburger</a>
     </div>
     <nav>
-      <a href= "#table"><span>< GiTable/></span> Mesas</a>
-      <a href= "#menu"><span><GiForkKnifeSpoon/></span> Menu</a>
-      <a href= "#kitchen"><span><GiChefToque/></span> Cocina</a>
-      <a href= "#progress"><span><BsGraphUp/></span> Progreso</a>
+      <Link to = "/tables"> <span>< GiTable/></span> Mesas</Link>
+      <Link to = "/menu"><span><GiForkKnifeSpoon/></span> Menu </Link>
+      <Link to = "/kitchen"><span><GiChefToque/></span> Cocina </Link>
+      <Link to = "/progress"><span><BsGraphUp/></span> Progreso </Link>
     </nav>
   </header>
 );

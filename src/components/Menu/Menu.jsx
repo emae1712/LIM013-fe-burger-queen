@@ -19,14 +19,34 @@ const Menu = () =>{
     })
   }, [category]);
 
-  // select each product
-  const [card, setCard] = useState([]); //como deberia iniciar
+  // select each product and save in an array
+  const [card, setCard] = useState([]);
 
-  //seleccionar producto
-  const selectCard = (card)=>{
-    setCard(card);
-    console.log(card);
+  //add products in Order component, addProduct is onclick event of each card from Products
+  const addProduct = (product)=>{
+    // create a copy of product to add more properties
+    const item = {...product,
+    quantity: 1,
+    note:""
+    }
+    //receive an array of each card clicked
+    const uno = card.find((oneCard)=> oneCard.id === item.id)
+    if(uno ===undefined){
+    setCard([
+      ...card,
+      item
+    ]);
   }
+}
+  
+
+  // remove a product
+  const deleteProduct = (id)=>{
+    setCard(card.filter((oneCard)=> oneCard.id !== id))
+  }
+
+  // contador de productos
+  // const [count, setCount] = useState(1);
 
   return (
     <>
@@ -39,10 +59,10 @@ const Menu = () =>{
       </div>
 
       <div className = "products__container" >
-        <Products products = {products} selectCard = {selectCard}/>
+        <Products products = {products} addProduct = {addProduct}/>
       </div>
     </main>
-    <Order id = {card.id} product = {card.Product} cost = {card.Cost}/>
+    <Order cards = {card} deleteProduct ={deleteProduct} />
     </>
   )
 };

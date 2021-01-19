@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
 import '../../components/../styles/Products.scss';
 
-const Products = ({products, selectCard}) =>{
+const Products = ({products, addProduct}) =>{
   
   return (
       <Fragment >
       {
       products.map((product) =>(
-        <div className = "product__card" key = {product.id} onClick={() => selectCard(product)} >
+        <div className = "product__card" key = {product.id} onClick={() => addProduct(product)} >
           <img className = "img-product" src={product.img} alt=""/>
           <h3 className = "product-name">{product.Product}</h3>
           <p className = "description">{product.Description}</p>

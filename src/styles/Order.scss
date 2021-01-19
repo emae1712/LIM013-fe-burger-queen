@@ -3,5 +3,141 @@
 .order__container{
     grid-area: order;
     padding: 0.5rem;
+
+    h2{
+        grid-area: titleOrden;
+        justify-self: start;
+    }
+    .mesa__container{
+        grid-area: numberTable;
+        justify-self: end;
+        align-self: center;
+        .mesa{
+            width: 2rem;
+        } 
+    }
+    
+    .client__container{
+        grid-area: client;
+        justify-self: start;
+        .client{
+            width: 6rem;
+        }
+    }
+    .total{
+        grid-area: total;
+        align-self: center;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+    
+    .costTotal{
+        grid-area: costTotal;
+        align-self: center;
+        width: 2rem;
+        height:1rem;
+    }
+    
+    .buttonSend{
+        grid-area: send; 
+        width: auto;
+        height: 2.1rem;
+        background: #F86615;
+        border-radius: 10px;
+        color: white;
+        float: right;
+        margin: 1rem;
+        margin-right: 13%
+        
+    }
+    
+    form{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: auto auto ;
+        grid-template-rows: auto;
+        grid-template-areas: 
+           "titleOrden  numberTable"
+           "client client "
+           "fieldset fieldset "
+           " . send";
+           
+            }
+    
+        fieldset{
+                grid-area: fieldset;
+                border: 3px solid #FFFFFF;
+                box-sizing: border-box;
+                border-radius: 10px;
+                margin: 1.4rem;
+    
+                .listOrden{
+                    display: flex;
+                    flex-direction: row;
+    
+                    .product__andNote{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: start;
+    
+                        .productSelect{
+                            margin: 0px;
+                            align-self: center;
+                            color: $main-color;
+                            margin-right: 0.6rem;
+                            font-size:16px;
+                        }
+    
+                        .specialNote{
+                            justify-self: start;
+                            font-size:8px;
+                        }
+                    }
+    
+                    .count{
+                        align-self: center;
+                        margin: 0.6rem;
+                        .number{
+                            width: 1.5rem;
+                        }
+                    }
+                    
+                    .price{
+                        align-self: center;
+                        color: $main-color;
+                        margin: 0.6rem;
+                        font-size:16px;
+                    }
+                    .trash{
+                        height: auto;
+                        align-self: center;
+                        margin: 0.6rem;
+                    }
+                }
+                .line{
+                    border: 1px solid #C4C4C4;
+                }
+                .total__container{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }  
+            }
+        .style_header_orden{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            color: #ffffff;
+             }
+    
+            span{
+            color: $main-color;
+            line-height: normal;
+            width: 1rem;
+            width: auto;
+            outline: none;
+            width: 100%;         
+     }
 }
 

@@ -4,25 +4,6 @@ $third-color: #3BAF29;
 $gradient-value: 180deg, #FFFFFF 0%, #FDDECC 0.01%, #FCBE9C 0.02%, #F86615 100%;
 $border: 10px;
 
-.App {
-  text-align: center;
-  width: 90%;
-  margin: 1rem auto;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "products order";
-}
-
-@media screen and (max-width: 768px){
-  .App{
-    grid-gap: 1rem;
-    grid-template-columns: none;
-    grid-template-areas: "products"
-                         "order";
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .rocket {
     animation: Astroburger infinite 20s linear;

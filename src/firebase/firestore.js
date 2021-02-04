@@ -3,7 +3,7 @@ import 'firebase/firestore';
 
 //Obtener los productos de firebase
 export const getProducts = (category) => {
-return firebase.firestore().collection('Products').where("Category", "==", category).get()
+  return firebase.firestore().collection('Products').where("Category", "==", category).get()
     .then((querySnapshot) => {
         const array = [];
         querySnapshot.forEach((doc) =>{
@@ -15,3 +15,13 @@ return firebase.firestore().collection('Products').where("Category", "==", categ
         return array;
     }); 
 }
+
+// Crear la base de datos de la orden
+export const orderBD = (sendOrder) => {
+    return firebase.firestore().collection('Orders').add(sendOrder)
+    }
+
+//Obtener la lista de ordenes de firebase
+export const getOrders = () => {
+  return firebase.firestore().collection('Orders').orderBy('date_init', 'desc')
+  }

@@ -3,7 +3,8 @@
 .products__container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 20px;
+    grid-gap: 1rem;
+    
     .product__card{
         margin-top: 0.8rem;
         border: 2px solid #C4C4C4;
@@ -13,17 +14,15 @@
         
     
         .img-product{
-            width: 105px;
-            height: 95px;
+            width: 100px;
+            height: 85px;
             margin-top: 10px;
             object-fit: contain;
         }
         .product-name{
-            // font-family: Roboto;
-            font-style: normal;
+            
             font-weight: normal;
             font-size: 24px;
-            line-height: 35px;
             display: flex;
             align-items: center;
             color: #FFFFFF;
@@ -31,20 +30,16 @@
             margin: 0px;
         }
         .description{
-            // font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 22px;
+            font-size: 1rem;
             line-height: 26px;
             text-align: center;
             color: #C4C4C4;
             margin: 0px;   
         }
         .costo{
-            // font-family: Comic Neue;
             font-style: normal;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 1.2rem;
             line-height: 28px;
             color: $main-color;
             margin-top: 0px;

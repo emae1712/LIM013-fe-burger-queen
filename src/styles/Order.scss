@@ -4,25 +4,44 @@
     grid-area: order;
     padding: 0.5rem;
 
-    h2{
+    legend{
         grid-area: titleOrden;
-        justify-self: start;
+        font-size: 1.5rem;
+        color: white;
     }
     .mesa__container{
         grid-area: numberTable;
         justify-self: end;
         align-self: center;
+        text-align: initial;
         .mesa{
-            width: 2rem;
+            width: 3rem;
+            border: none;
+            background: none;
+            border-bottom: 2px solid $main-color;
+            justify-content: initial;
+            color: white;
+            font-size: 1rem;
         } 
     }
     
     .client__container{
         grid-area: client;
         justify-self: start;
+        text-align: initial;
         .client{
-            width: 6rem;
+            width: 10rem;
+            border: none;
+            background: none;
+            border-bottom: 2px solid $main-color;
+            color: white;
+            // font-size: 1rem;
+            font-size: calc(1em + 1vw);
+
+            
         }
+            
+        
     }
     .total{
         grid-area: total;
@@ -70,7 +89,8 @@
                 border: 3px solid #FFFFFF;
                 box-sizing: border-box;
                 border-radius: 10px;
-                margin: 1.4rem;
+                margin: 1rem;
+                min-width: 350px;
     
                 .listOrden{
                     display: flex;

@@ -1,0 +1,66 @@
+@import 'App.scss';
+.kitchen__tittle{
+  width: 90%;
+  margin: 0.5rem auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  h1{
+    color: white;
+  }
+  span{
+    font-size: 3rem;
+    color: white;
+  }
+}
+.kitchen__view {
+  text-align: center;
+  width: 80%;
+  margin: 1rem auto;
+  border: 2px solid $main-color;
+  border-radius: 1rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  button{
+    border-radius: 10px;
+    background: linear-gradient($gradient-value);
+    color: white;
+    outline: none;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .left-column{
+    color: white;
+    text-align: left;
+    
+    p{
+      margin: 0.2rem;
+    }
+  }
+  .middle-menu{
+
+    td{
+      text-align: center;
+      padding: 0 1rem;
+      color: white;
+
+      input{
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+
+  .right-checkbox{
+    
+    width: 2rem;
+    height: 2rem;
+  }
+
+}

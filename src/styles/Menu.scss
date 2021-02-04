@@ -1,48 +1,64 @@
 @import 'App.scss';
+.menu__view {
+    text-align: center;
+    width: 90%;
+    margin: 1rem auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "products order";
 
-.menu__buttons{
-    grid-area: products;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-between;
+    .menu__buttons{
+        grid-area: products;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
 
-    .btn-menu{
-        width: 100px;
-        height: 80px;
-        background: linear-gradient($gradient-value);
-        border-radius: $border;
-        border: none;
-        outline: none;
-        font-size: 1.2rem;
-        color: white;
-        cursor: pointer;
-
-        span{
+        .btn-menu{
+            width: 100px;
+            height: 80px;
+            background: linear-gradient($gradient-value);
+            border-radius: $border;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
             color: white;
-            font-size: 2rem;
-        }
-    }
-    .btn-unselect{
-        width: 100px;
-        height: 80px;
-        background: $secondary-color;
-        border-radius: $border;
-        border: none;
-        outline: none;
-        font-size: 1.2rem;
-        color: white;
-        cursor: pointer;
+            cursor: pointer;
 
-        span{
-            color: white;
-            font-size: 2rem;
+            span{
+                color: white;
+                font-size: 2rem;
+            }
         }
-        
+        .btn-unselect{
+            width: 100px;
+            height: 80px;
+            background: $secondary-color;
+            border-radius: $border;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
+            color: white;
+            cursor: pointer;
+
+            span{
+                color: white;
+                font-size: 2rem;
+            }
+            
+        }
     }
 }
 
 @media screen and (max-width: 768px){
-    .menu__buttons{
-        justify-content: space-around;
+    .menu__view{
+        grid-gap: 1rem;
+        grid-template-columns: none;
+        grid-template-areas: "products"
+                             "order";
+      
+        .menu__buttons{
+            justify-content: space-around;
+        }
     }
 }

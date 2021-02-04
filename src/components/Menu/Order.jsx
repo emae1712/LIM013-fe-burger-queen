@@ -3,8 +3,9 @@ import '../../components/../styles/Order.scss';
 import { BsTrashFill } from "react-icons/bs";
 import { GoDiffAdded,GoDiffRemoved } from "react-icons/go";
 import { useForm } from "react-hook-form";
+import { orderBD } from "../../firebase/firestore";
 
-const Order = ({cards, deleteProduct, increaseProduct, decreaseProduct}) =>{
+const Order = ({cards, deleteProduct, increaseProduct, decreaseProduct, setCards}) =>{
   
   // sum of products
   const total = cards.reduce((sum, card) => ( sum + card.subtotal ), 0);
@@ -12,15 +13,19 @@ const Order = ({cards, deleteProduct, increaseProduct, decreaseProduct}) =>{
   //Validate form
   const{register, errors, handleSubmit} = useForm();
 
-  const onSubmit = (data,e) =>{
+  // send the Order data base
+  const onSubmit = (inputs,e) =>{
     const sendOrder = {
-      ...data,
-      order : cards,
+      ...inputs,
+      products: cards,
       total: total,
-      date: new Date()
+      date_init: new Date(),
+      state: 'preparar',
     }
-    console.log(sendOrder);
+    orderBD(sendOrder);
+    // console.log(sendOrder);
     e.target.reset()
+    setCards([])
   }
 
   return (
@@ -82,7 +87,7 @@ const Order = ({cards, deleteProduct, increaseProduct, decreaseProduct}) =>{
         <hr className='line'></hr>
         <div className='total__container'>
           <p className='total'>Total</p>
-          <p  className='total'>{total}</p>
+          <p  className='total'>S/. {total}</p>
         </div>
         
         </fieldset>

@@ -12,12 +12,10 @@ import {
  } from "react-router-dom";
 
 function App() {
-  
    return (
-     
     <Router>
       <Header/>
-      <div className = "App">
+      <>
         <Switch>
           <Route path = '/menu'>
             <Menu/>
@@ -32,7 +30,7 @@ function App() {
             <Progress/>
           </Route>
         </Switch>
-      </div>
+      </>
     </Router>
     
    

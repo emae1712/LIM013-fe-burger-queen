@@ -31,7 +31,8 @@ const Menu = () =>{
       cost: item.Cost,
       quantity: 1,
       subtotal: 0,
-      note:""
+      note:"",
+      done: false,
     }
     //receive an array of each card clicked
     const uno = cards.find((oneCard)=> oneCard.id === product.id)
@@ -71,7 +72,7 @@ const Menu = () =>{
   }
 
   return (
-    <>
+  <section  className = "menu__view">
     <main className = "menu-btn-products">
       <div className = "menu__buttons">
         <button className = {category ==='desayuno' ? 'btn-menu' : 'btn-unselect'} onClick={() => setCategory('desayuno')} ><span><GiCoffeeCup/></span> Desayuno</button>
@@ -86,12 +87,12 @@ const Menu = () =>{
     </main>
     <Order 
       cards = {cards} 
-      setProducts = {setCards}
+      setCards = {setCards}
       deleteProduct ={deleteProduct} 
       increaseProduct = {increaseProduct}
       decreaseProduct = {decreaseProduct}
        />
-    </>
+    </section>
   )
 };
   

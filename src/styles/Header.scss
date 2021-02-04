@@ -11,6 +11,10 @@ header{
   border-bottom: 1px solid $secondary-color;
   //background: linear-gradient($gradient-value);
 
+  .activeRoute{
+    text-decoration: underline;
+  text-decoration-color: red;
+  }
   div{
     line-height: 80px;
     display: inline-flex;

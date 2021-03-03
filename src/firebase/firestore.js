@@ -25,3 +25,11 @@ export const orderBD = (sendOrder) => {
 export const getOrders = () => {
   return firebase.firestore().collection('Orders').orderBy('date_init', 'desc')
   }
+
+// modficar info
+export const checkChef = (orderId, newarr) =>{
+    return firebase.firestore().collection("Orders").doc(orderId).update({
+        products: newarr,
+        state: "progreso"
+    })
+}

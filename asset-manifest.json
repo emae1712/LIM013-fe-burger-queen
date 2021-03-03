@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/LIM013-fe-burger-queen/static/css/main.fdab7854.chunk.css",
+    "main.js": "/LIM013-fe-burger-queen/static/js/main.f7ceff71.chunk.js",
+    "main.js.map": "/LIM013-fe-burger-queen/static/js/main.f7ceff71.chunk.js.map",
+    "runtime-main.js": "/LIM013-fe-burger-queen/static/js/runtime-main.328e8dc9.js",
+    "runtime-main.js.map": "/LIM013-fe-burger-queen/static/js/runtime-main.328e8dc9.js.map",
+    "static/js/2.1d8c19b8.chunk.js": "/LIM013-fe-burger-queen/static/js/2.1d8c19b8.chunk.js",
+    "static/js/2.1d8c19b8.chunk.js.map": "/LIM013-fe-burger-queen/static/js/2.1d8c19b8.chunk.js.map",
+    "static/js/3.58d276d9.chunk.js": "/LIM013-fe-burger-queen/static/js/3.58d276d9.chunk.js",
+    "static/js/3.58d276d9.chunk.js.map": "/LIM013-fe-burger-queen/static/js/3.58d276d9.chunk.js.map",
+    "index.html": "/LIM013-fe-burger-queen/index.html",
+    "static/css/main.fdab7854.chunk.css.map": "/LIM013-fe-burger-queen/static/css/main.fdab7854.chunk.css.map",
+    "static/js/2.1d8c19b8.chunk.js.LICENSE.txt": "/LIM013-fe-burger-queen/static/js/2.1d8c19b8.chunk.js.LICENSE.txt",
+    "static/media/astro-logo.03964968.png": "/LIM013-fe-burger-queen/static/media/astro-logo.03964968.png",
+    "static/media/index.css": "/LIM013-fe-burger-queen/static/media/background.fdf3d968.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.328e8dc9.js",
+    "static/js/2.1d8c19b8.chunk.js",
+    "static/css/main.fdab7854.chunk.css",
+    "static/js/main.f7ceff71.chunk.js"
+  ]
+}
